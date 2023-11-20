@@ -1,0 +1,36 @@
+a{
+    color: #222;
+    text-decoration: none;
+}
+a:visited{
+    color: red;
+}
+a:link{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    object-fit: fill;
+    /* contain은 가장 긴 부분에 맞춰서 이미지를 채우고
+    fill은 비율을 무시한채로 영역을 채운다 */
+    object-fit: cover;
+    /* 가장 빈번하게 쓰이는 속성, 이미지의 비율을 최대한 유지 */
+    background-color: blue;
+    /* filter:blur(3px); */
+    filter:grayscale(100%);
+    /* 흑백 */
+    transition: all 1000ms ease;
+    transform: scale(1);
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+img:hover{
+    filter:grayscale(0);
+    /* transform: scale(1.5); */
+    
+}

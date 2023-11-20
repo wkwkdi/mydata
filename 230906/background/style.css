@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    background-image: url('https://pip-thumb.zumst.com/api/v1/fjfhx_VC002_82946242_content.jpeg?w=640&h=360');
+    /* ('') 다옴표 넣어주고 이미지가 반복 */
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* repeat-x 는 x축으로 y는 축으로만 반복 no-repeat는 반복엑스 */
+    /* border: 1px solid black; */
+    background-position: center;
+    /* 사진의 위치 */
+    /* background-size: 100%; */
+    background-size: cover;
+    /* 주 사용 size */
+}

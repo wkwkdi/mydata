@@ -1,0 +1,45 @@
+#header{
+    font-size:32px;
+}
+
+#header> h2{
+    font-size: 0.75rem;
+}
+.LIST{
+    font-size: 60PX;
+}
+.list li{
+    font-size: 0.8rem;
+}
+.btn{
+    /* width: 50px;
+    height: 40px; */
+    padding: 0.5rem 1rem;
+    background-color: gray;
+    border: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    border-radius: 40px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+    /* 위 속성을 축약한게 밑에 */
+    /* 1s=1000ms, 0.2s=200ms*/
+    /* transition은 마우스 커서 올렸을때 바뀌는 시간 */
+    transition: all 200ms ease;
+    /* 컨트롤 스페이스바하면 커서모양 나옴 */
+}
+.btn:hover{
+    background-color: aqua;
+}
+/* 마우스커서 올리면 색 변경 */
+.btn:active{
+    background-color: blueviolet;
+}
+/* 클릭시 색상 변경 */
+.btn-primary{
+    background-color: blue;
+    color: white;
+}

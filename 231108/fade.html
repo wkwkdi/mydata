@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="../resources/jqurey-3.6.4.js"></script>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        display: none;
+    }
+    #div1{
+        background-color: rgb(31, 179, 179);
+    }
+    #div2{
+        background-color: olivedrab
+    }
+    #div3{
+        background-color: rgb(160, 209, 252)
+    }
+</style>
+<body>
+    <p>fade in 버튼을 누르면 요소가 나타나고 fade out 버튼을 누르면 요소가 사라진다</p>
+    <button id="in">Fade In</button>
+    <button id="out">Fade Out</button>
+    <button id="toggle">Fade Toggle</button>
+    <button id="to">FadeTO</button>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    
+</body>
+<script>
+    $("#in").on("click", function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(2000);
+    })
+    $("#out").on("click", function(){
+        $("#div1").fadeOut();
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeOut(2000);
+    })
+    $("#toggle").on("click", function(){
+        $("#div1").fadeToggle(1000);
+        $("#div2").fadeToggle(2000);
+        $("#div3").fadeToggle(3000);
+    })
+    $("#to").on("click", function(){
+        $("#div1").fadeTo(1000, 0.15);
+        $("#div2").fadeTo(2000, 0.4);
+        $("#div3").fadeTo(3000, 0.7);
+    })
+</script>
+</html>

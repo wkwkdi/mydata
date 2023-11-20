@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+.pricing{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+    padding: 1rem;
+}
+.pricing-item{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(199, 196, 196);
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+   
+}
+.btn{
+    padding: 1rem 2rem;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid hsl(200,50%,50%);
+    color:hsl(200,50%,50%);
+}
+li{
+    display: flex;
+    align-items: start;
+    padding: 0.5rem 0;
+    color: rgb(114, 113, 113);
+}
+h2{
+    font-size: 1.5rem;
+}
+p{
+    line-height: 1.75;
+    color: rgb(114, 113, 113);
+}
+.cost{
+    font-size: 48px;
+    font-weight: bold;
+}
+.pricing-item.recommend{
+    border: 1px solid hsl(200,50%,50%);
+}
+.pricing-item.recommend h2{
+    color: hsl(200,50%,50%) ;
+}
+.pricing-item.recommend .btn{
+    background-color: hsl(200,50%,50%);
+    color: white;
+}
+@media(min-width:640px){
+    .pricing{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width:1024px){
+    .pricing{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(min-width:1200px){
+    .pricing{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

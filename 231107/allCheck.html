@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="../resources/jqurey-3.6.4.js"></script>
+</head>
+<body>
+    <input type="checkbox" id="chkController">
+    <label for="chkController">전체선택</label>
+    <br>
+    <input type="checkbox" id="a">
+    <label for="a">aaa</label>
+    <input type="checkbox" id="b">
+    <label for="b">bbbb</label>
+    <input type="checkbox" id="c">
+    <label for="c">ccc</label>
+    <input type="checkbox" id="d">
+    <label for="d">ddd</label>
+    <input type="checkbox" id="e">
+    <label for="e">eeee</label>
+</body>
+<script>
+    $("#chkController").on("click", function(){
+        const allChk = $("#chkController")
+        const chk= allChk.prop("checked")
+
+        if(chk){
+            allChk.siblings("input").prop("checked",true);
+        }else{
+            allChk.siblings("input").prop("checked",false);
+        }
+    })
+   $("#chkController").siblings("input").on("click", function(){
+        const checkedBox= $("#chkController").siblings("input:checked");
+        const allCheckBox = $("#chkController").siblings("input");
+        if(allCheckBox.length == checkedBox.length){
+            $("#chkController").prop("checked",true);
+        }else{
+            $("#chkController").prop("checked",false);
+            
+        }
+   })
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="구글창 열기" onclick="openPopup()">
+</body>
+<script>
+    function openPopup(){
+        const child = open(
+            "../231024/hompage.html",
+            "_blank",
+            "width=1000,height=1000");
+        //open("http://www.google.co.kr","_blank","width=1000,height=1000");
+    console.log(child);
+    child.close();
+    function closeChild(){
+        
+    }
+}
+
+</script>
+</html>

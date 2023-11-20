@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+     margin: 0 auto;
+     max-width: 500px;
+     /* 크기 제한을 둬야 margine(auto)가 작동 */
+}
+button{
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc(100%/5);
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+
+}

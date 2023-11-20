@@ -1,0 +1,69 @@
+.box{
+    display: inline-block;
+    /* inline과 block의 값을 모두 가지고 있다
+    inline 요소에 width, height 값을 적용할때 사용 */
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: brown;
+}
+
+#first{
+    background-color: blue;
+    transform: rotate(0deg);
+    transition: transform 1s ease, margine-left 1s ease;
+    /* deg=각도 */
+    transform-origin: right bottom;
+    /* 위 속성은 어디로 움직일지 정해주는 속성 */
+}
+#first:hover{
+    transform: rotate(90deg) translatex(100%);
+    /* margin-left: 100px; */
+}
+
+#second{
+    background-color: aqua;
+    transform: scale(1);
+    transition: transform 1s ease;
+}
+#second:hover{
+    transform: scale(2);
+    /* transform은 다른 요소에 영향을 주지 않고,단독으로 변형된다 */
+}
+#third{
+    background-color: bisque;
+    transform: skew(0deg);
+    /* transform: skewX(45deg);
+    transform: skewY(45deg); */
+    /* skew는 도형을 기울임 */
+    transition: transform 1s ease;
+}
+#third:hover{
+    transform:skew(30deg);
+}
+#t1{
+    transform: translateX(0%);
+    transition: transform 2s cubic-bezier(1, 0.02, 0, 1.36);
+}
+#t1:hover{
+    transform: translateX(100%);
+}
+#t2{
+    /* transform: translateY(10px); */
+    transform: translateX(0%);
+    transition: transform 2s ease-in;
+}
+#t2:hover{
+    transform: translateX(100%);
+}
+#t3{
+    /* transform: translate(50px,50px); */
+    /* translate(X값,Y값 같이 이동) */
+    transform: translateX(0%);
+    transition: transform 2s 1s ease-in-out;
+    /* animation,transform을 많이 사용하면 화면이 버벅거릴수있다 */
+}
+#t3:hover{
+    transform: translateX(100%);
+}

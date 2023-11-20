@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    flex-basis: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.box:nth-child(1){
+    /* order: 2; */
+    background-color: hsl(100,50%,50%);
+}
+.box:nth-child(2){
+    background-color: hsl(100,50%,60%);
+}
+.box:nth-child(3){
+    /* order: -1; */
+    background-color: hsl(100,50%,70%);
+}
+.box:nth-child(4){
+    /* order: 1; */
+    background-color: hsl(100,50%,80%);
+}
+/* order값 기본은 0 거기에 숫자를 넣으면 0001로 1숫자를
+받는 차일드가 뒤로감 */
+@media (min-width:1024px){
+    /* .flex>*{
+        color: red;
+    } */
+    .box{
+        flex-basis: calc(100%/2);
+    }
+}
+@media (min-width:1200px){
+    .box{
+        flex-basis: calc(100%/3);
+        
+    }
+    .box:nth-child(2){
+        background-color: red;
+    }
+}
+@media (min-width:1440px){
+    .box{
+        flex-basis: calc(100%/4);
+        
+    }
+    .box:nth-child(3){
+        background-color: orange;
+    }
+}
+
+@media(orientation:landscape){
+    .box{
+        background-color: red !important;
+    }
+}
+@media (min-width:320px) and (max-width:640px){
+    .box{
+        background-color: blue!important;
+    }
+}
+/* media는 값을 정해주면 class안에 있는 애들이 1000px이상
+넘어가면 변경됨 */
+/* media query를 안줬을때 기본적으로 width:0부터 게산 */
+/* mebile=640px
+    table=768,1024px
+    desktop=1200,1440,1920px
+ */

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #wrapper {
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(135deg, gray, white);
+        border: 3px solid gray;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #imgWrapper {
+        width: 80%;
+        height: 80%;
+        border: 5px solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.on {
+        border: 20px solid black;
+    }
+
+    /* div.off {
+        border: 5px solid black;
+    } */
+
+    img.on {
+        filter: opacity(0.5) drop-shadow(0 0 0 red) saturate(500%) blur(3px);
+    }
+
+    /* img.off {
+    }
+     */
+    img {
+        filter: contrast(50%);
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div id="wrapper">
+        <div id="imgWrapper" class="off">
+            <img src="다운로드.png" class="off">
+        </div>
+    </div>
+</body>
+<script>
+    const imgTag = document.querySelector("img");
+    const divTag = document.querySelector("#imgWrapper");
+    imgTag.addEventListener("click", function (){
+        // const currentClass = imgTag.classList[0];
+        // if(currentClass == "off"){
+        //     imgTag.classList.remove("off");
+        //     imgTag.classList.add("on");
+        //     divTag.classList.remove("off");
+        //     divTag.classList.add("on");
+        // }else{
+        //     imgTag.classList.remove("on");
+        //     imgTag.classList.add("off");
+        //     divTag.classList.remove("on");
+        //     divTag.classList.add("off");
+        // }
+
+        imgTag.classList.toggle("on");
+        divTag.classList.toggle("on");
+    });
+</script>
+
+</html>

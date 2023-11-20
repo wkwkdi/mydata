@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../resources/jqurey-3.6.4.js"></script>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="attrSelctor2.html">
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td><input type="text" placeholder="아이디 10글자 이내"></td>
+                    <td><input type="button" value="중복확인" /></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td>
+                        <input type="password" placeholder="영문 숫자 특수문자 포함 8자 이상" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td><input type="password" /></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>선택</option>
+                            <option>@gmail.com</option>
+                            <option>@naver.com</option>
+                            <option>@daum.net</option>
+                            <option>직접입력</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>추가 정보</legend>
+            <p>
+                <strong>프로필 사진</strong> <input type="file" value="파일 선택" accept="image/gif, image/jpeg">
+            </p>
+            <p>
+                <strong>성별</strong>: <input type="radio" value="남자">남자
+                <input type="radio">여자
+            </p>
+            <p>
+                <strong>생년월일</strong>: <input type="date">
+            </p>
+            <p>
+                <strong>취미</strong><br>
+                <input type="checkbox">야구
+                <input type="checkbox">농구
+                <input type="checkbox">축구<br>
+                <input type="checkbox">공부
+                <input type="checkbox">음악감상<br>
+                <input type="checkbox">기타 <input type="text">
+            </p>
+            <p>
+                <strong>자기소개</strong><br>
+                <textarea rows="10" cols="100"></textarea>
+            </p>
+        </fieldset>
+        <p>
+        <input type="submit" value="회원가입">
+        <input type="reset" value="다시입력">
+        <input type="button" value="이전으로" onclick="javascript:history.go(-1)">
+        </p>
+    </form>
+</body>
+    <script>
+        $(":input").css({
+            backgroundColor:"pink",
+            border:"2px solid lime",
+        });
+        $(":text, :password").css("border","3px solid blue");
+        $("input[type=file]").css("border","3px solid red");
+        $("input[type=date]").css("border","3px solid green");
+        $("input[type=button]").css("backgroundColor","yellow");
+        $("input[type=submit]").css("backgroundColor","green");
+
+
+    </script>
+</html>

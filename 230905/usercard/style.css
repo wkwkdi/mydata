@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'IAMAPLAYER';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+body{
+    background-color:gray
+}
+
+.card{
+    width:100%;
+    background-color: aliceblue;
+    padding:1rem;
+    max-width: 400px;
+    margin: 1rem;
+    margin: 1rem auto 0;
+    /* 위에서 1rem만큼 양쪽으로 오토*/
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:0.25rem;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+    /* rgba는 투명도로 나타냄 1=100%,0=0%,0.5=50% */
+    /* box-shadow x값,y값,blur값 (spread)생략가능 color */
+    transform: translateY(0px);
+    transition: all 500ms ease;
+    
+}
+.card:hover{
+    transform: translateY(-20px);
+}
+
+.avatar{
+    border: 3px solid rgb(241, 135, 135);
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+.card h2{
+    font-size: 20px;
+    font-family: 'IAMAPLAYER';
+}
+.card p{
+    font-size: 18px;
+}
+.card .button{
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    border: 1px solid black;
+    padding: 0.5rem 1.25rem;
+    text-decoration: none;
+    color:aliceblue;
+    background-color: black;
+
+}
+.card .button:hover{
+    background-color: red;
+    color: aliceblue;
+}
+.card .button:hover .icon{
+    color: aqua;
+}
+.icon{
+    font-size: 40px;
+    color: aquamarine;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <h1>강지은</h1>
+    <p>아가나라아가라어마어리가랑</p>
+    <p>가나다라나마사ㅏ아자갘ㅊ타다다</p>
+    <p>아아거라ㅏㅇ널거ㅕ나어ㅏㅏ니ㅣㄴㅇ럴니야ㅏㄱ댜</p>
+    <button id="modal_open" type="button">열기</button>
+    <div id="modal_back">
+        <div id="modal_win">
+            <div id="modal_header">
+                <h4>modal window</h4>
+                <button id="modal_close" type="button">&times;</button>
+            </div>
+            <div id="modal_body">
+                dkdkdd dkdn f ff ffj djd fjf ddj djf jd fj fjd ffj fk fjf fj fjfd djf jd fj d jdfjdkdkdd dkdn f ff ffj djd fjf ddj djf jd fj fjd ffj fk fjf fj fjfd djf jd fj d jdfj dkdkdd dkdn f ff ffj djd fjf ddj djf jd fj fjd ffj fk fjf fj fjfd djf jd fj d jdfj
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+<script>
+    //modal_open이 눌리면 이런일이벌어질것
+    //modal_back의 스타일 중 display의 값을 'block'으로 변경한다(숨겨졌던 modal_back이 보여진다)
+    document.getElementById("modal_open").onclick = function(){
+        document.getElementById("modal_back").style.display = "block";
+    }
+    
+    
+    $("#modal_open");
+    
+    //modal_close가 눌리면 이런일이벌어질것.
+    //modal_back의 스타일 중 display의 값을 'none'으로 변경한다(보여졌던 modal_back이 숨겨진다)
+    document.getElementById("modal_close").onclick = function(){
+        document.getElementById("modal_back").style.display = "none";
+    }
+    
+    </script> 
+</html>

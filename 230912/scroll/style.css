@@ -1,0 +1,65 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px;
+    color: white;
+}
+p{
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+.circle{
+    border: 3px solid white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 60px;
+    display: flex;
+    margin: 0 auto;
+    
+}
+.btn{
+    animation-name: morp;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 50%;
+    border: 1px white;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 29px;
+    
+}
+
+.container{
+    background-image: url('https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg?auto=compress&cs=tinysrgb&w=300');
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    
+
+}
+@keyframes morp{
+    0%{
+        border-radius: 50%;
+        background-color: white;
+        transform: translateY(3px);
+        
+    }
+    100%{
+        border-radius: 50%;
+        background-color: white;
+        transform: translateY(33px);
+    }
+}

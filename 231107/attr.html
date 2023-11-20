@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../resources/jqurey-3.6.4.js"></script>
+<style>
+    div{
+        border: 2px solid blue;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
+</style>
+<body>
+    <div>
+        <img src="../사진/1.jpeg">
+        <img src="../사진/2.jpeg">
+        <img src="../사진/3.jpeg">
+        <img src="../사진/4.webp">
+        <img src="../사진/2.webp">
+        <br>
+        <button onclick="changeTitle">눌러보세요</button>
+    </div>
+</body>
+<script>
+    function changeTitle(){
+        const imgTags=$("img");
+        imgTags.each((i,el) =>{
+            const srcVal = $(el).attr("src");
+            $(el).attr("title",srcVal);
+        })
+    }
+</script>
+</html>

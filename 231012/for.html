@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 연습</title>
+</head>
+<body></body>
+<script>
+    //1~100가지 출력
+    document.write("<h1>1부터100까지 출력</h1>")
+    for(let i=1; i<101; i++){
+    document.write(i + "&nbsp");
+   }
+
+   //10부터 1까지 출력
+    document.write("<h1>10부터1까지 출력</h1>")
+    for(let i=10; i>0; i--){
+    document.write(i + "&nbsp");
+   } 
+
+   //0부터 10까지의 짝수만 출력
+    document.write("<h1>0부터 10까지 짝수만 출력</h1>")
+    for(let i=0; i<=10; i+=2){
+    document.write(i + "&nbsp");
+   }
+
+   //1부터100까지 짝수의 합을 구해보세요
+    document.write("<h1>1부터 100까지 짝수의 합</h1>")
+    let sum=0;
+    for(let i=0; i<=100; i+=2){
+    sum = sum + i;
+    }
+    document.write(sum + "&nbsp");
+
+    //별 찍기
+    document.write("<h1>직사각형 별찍기</h1>")
+    for(let i=0; i < 5; i++){
+     for(let j=0; j < 5; j++){
+        document.write("*")
+    }
+    document.write("<br/>")
+    }
+
+    document.write("<h1>왼쪽 별찍기</h1>")
+    for(let i=0; i < 5; i++){
+     for(let j=0; j < i+1; j++){
+        document.write("*")
+    }
+    document.write("<br/>")
+    }
+
+    document.write("<h1>오른쪽 별찍기</h1>")
+    for(let i=0; i < 5; i++){
+     for(let j=4; j > i; j--){
+        document.write("&nbsp");
+    }
+        for(let j=0; j <i+1; j++){
+        document.write("*")
+    }
+        document.write("<br/>")
+
+}
+
+document.write("<h1>거꾸로 별찍기</h1>")
+for(let i=0; i < 5; i++){
+    for(let j=5; j > i; j--){
+        document.write("*")
+    }
+    document.write("<br/>")
+
+}
+
+document.write("<h1>거꾸로 오른쪽 별찍기</h1>")
+    for(let i=0; i < 5; i++){
+     for(let j=0; j < i; j++){
+        document.write("&nbsp");
+    }
+        for(let k=5; k>i; k--){
+        document.write("*")
+    }
+        document.write("<br/>")
+
+}
+
+document.write("<h1>트리 별찍기</h1>")
+for(let i=0; i <5; i++){
+    for(let j=5; j>i; j--){
+        document.write("&nbsp");
+    }
+    for(let k=0; k<i+1+i; k++){
+        document.write("*")
+    }
+    document.write("<br/>")
+
+}
+
+document.write("<h1>거꾸로 트리 별찍기</h1>")
+for(let i=0; i <5; i++){
+    for(let j=0; j<i; j++){
+        document.write("&nbsp");
+    }
+    for(let k=5; k>i; k--){
+        document.write("*")
+    }
+    for(let z=4; z>i; z--){
+        document.write("*")
+
+    }
+    document.write("<br/>")
+
+}
+document.write("<h1>마름모 별찍기</h1>")
+
+for(let i=0; i <5; i++){
+    for(let j=4; j>i; j--){
+        document.write("&nbsp");
+    }
+    for(let k=0; k<=i*2; k++){
+        document.write("*")
+    }
+    document.write("<br/>") 
+}
+for(let i=0; i <4; i++){
+
+for(let j=0; j<=i; j++){
+    document.write("&nbsp");
+}
+for(let k=4; k>i; k--){
+    document.write("*")
+}
+for(let z=3; z>i; z--){
+    document.write("*")
+
+}
+document.write("<br/>")
+}
+
+document.write("<h1>마름모 별찍기(repeat 함수 이용)</h1>")
+//문자열.repeat(반복횟수);
+for(let i=1; i <=5; i++){
+    document.write("&nbsp;".repeat(5-i)+"*".repeat(2*i-1)+"<br/>")
+
+}
+for(let j=4; j>=1; j--){
+    document.write("&nbsp;".repeat(5-j)+"*".repeat(2*j-1)+"<br/>")
+
+}
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+</script>
+</html>

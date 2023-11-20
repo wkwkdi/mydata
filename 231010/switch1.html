@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스위치문 연습1</title>
+</head>
+<body></body>
+<script>
+    // var grade = prompt("성적을 입력하시오:", "A-F사이의 문자로");
+    // switch(grade){
+    //     case'A': alert("잘했어요");
+    //     break;
+    //     case'B': alert("좋은 점수군요");
+    //     break;
+    //     case'C': alert("괜찮은 점수군요");
+    //     break;
+    //     case'D': alert("좀 더 노력하세요");
+    //     break;
+    //     case'F': alert("다음학기 수강하세요");
+    //     break;
+    //     default:alert("알 수 없는 학점입니다")
+    // }
+    
+    var grade = prompt("점수를 입력받아 출력하세요:", "0-100사이 숫자로")
+    //100, 90-99 , 80-89 , 70-79 , 60-69 ,59이하
+    //숫자를 parsint(정수)형으로 바꿔서 10으로 나눠주면 됨. 앞에 숫자는 같음 9,8,7,6 나머지는 다 통일 해서 default로 F
+
+    switch(parseInt(grade/10)){
+        case 10:
+        case 9:
+            document.write('A');
+        break;
+        case 8:
+            document.write('B');
+        break;
+        case 7:
+            document.write('C');
+        break;
+        case 6:
+            document.write('D');
+        break;
+        default:document.write('F');
+    }
+</script>
+</html>

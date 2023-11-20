@@ -1,0 +1,43 @@
+.flex{
+    display: flex;
+    /* flex는 자식요소의 높이를 부모 높이 만큼 일렬로 늘여놓음 */
+    gap:10px;
+    /* 위 속성은 간격 */
+    height: 500px;
+    background-color: rgb(64, 64, 228);
+    justify-content: flex-start;
+    /* flex의 시작점에 정렬하는것이 기본값 */
+    justify-content: center;
+    justify-content: flex-end;
+    /* 위 속성은 오른쪽으로 정렬 */
+    justify-content: space-around;
+    /* 위 속성은 잘 안씀. 네모 크기의 절반만큼 양옆에 여백을 줌 */
+    justify-content: space-evenly;
+    /* 위 속성은 간격이 동일,잘 안씀 */
+    justify-content: space-between;
+    /* 가장 많이 쓰임,첫번째와 마지막을 끝에 붙이고 나머지는 균등하게
+    배분함 */
+    align-items: stretch;
+    /* 위 속성은 세로로 정렬, 늘리기는게 기본값 */
+    align-items: flex-start;
+    /* 자식요소를 가장 윗 부분, 시작점에 정렬 */
+    align-items: center;
+    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    /* justify는 가로,align은 세로 정렬 */
+
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 1px solid red;
+}
+.box:nth-child(2){
+    background-color: rgb(105, 233, 233);
+}
+.box:nth-child(3){
+    background-color: rgb(12, 46, 46);
+}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&display=swap');
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.title{
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2rem;
+    /* 글자 두께 조절 */
+    font-weight:400;
+    /* 글자에 크기 조절 */
+    text-decoration: underline;
+    /* text-decoration: dashed;
+    text-decoration: line-through; */
+    letter-spacing: -0.07px;
+    /* 위 부분은 글자간격 */
+    line-height: 1.5;
+    /* 위 부분은 글자열 간격 차이*/
+    white-space: nowrap;
+    /*줄을 나누지않고 일자로*/
+}
+.sba{
+    font-family: 'SBAggroB';
+}
+.bold{
+    font-family: 'PyeongChangPeace-Bold';
+}

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 1rem;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+   
+    
+}
+.logo {
+    border:1px solid rgb(161, 161, 161);
+    text-align: center;
+    padding: 1rem;
+    transform: translateY(100%);
+    
+   
+}
+button{
+    border: 0;
+    
+    width: 140px;
+    height: 55px;
+}
+.logo:hover::after{
+    transition: all 1s ease;
+    background-color: blue;
+    overflow: hidden;
+    content: '구독';
+    width: 100px;
+    height: 50px;
+   
+
+    
+}
+

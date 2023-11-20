@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#box1{
+    width: 200px;
+    height: 100px;
+    background-color: #0066cc;
+    color: white;
+    position: relative;
+}
+#inner_box{
+    display: inline;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

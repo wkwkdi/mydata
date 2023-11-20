@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    /* border: 1px solid blue; */
+    box-shadow: 0 0 0 1px blue;
+    position: relative;
+}
+.input-wrapper input{
+    padding: 1rem;
+    border: 0;
+}
+.input-wrapper label{
+    position: absolute;
+    top: -16px;
+    left: 9px;
+    background-color: white;
+    padding: 4px 8px;
+}
+.input-wrapper input:focus{
+    box-shadow: 0 0 0 3px blue;
+    outline: none;
+}
+button[type="submit"]{
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+
+}
+button[type="submit"]:active{
+    background-color: black;
+}

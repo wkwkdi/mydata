@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgb(118, 137, 245);
+    /* align-items: flex-end; */
+
+    /* align-items-한 줄일때 수직정렬하는 속성
+       align-content-두 줄 이상일때 수직정렬하는 속성
+       align-self-단독으로 수직정렬하는 속성 */
+}
+.flex div{
+    flex-grow: 1;
+}
+.stretch{
+    align-self: stretch;
+    /* 따로 이동시킬때 */
+    background-color: hsl(180, 50%, 50%);
+}
+.start{
+    align-self: flex-start;
+    background-color: hsl(180, 50%, 30%);
+}
+.center{
+    align-self: center;
+    background-color: hsl(180, 50%, 70%);
+}
+.end{
+    align-self: flex-end;
+    background-color: hsl(180, 50%, 20%);
+}

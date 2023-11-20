@@ -1,0 +1,16 @@
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Pen+Script&family=Pacifico&display=swap" rel="stylesheet">
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    display: inline;
+    padding-left: 10px;
+    margin: 10px;
+    
+
+}
+li:nth-child(1){
+    font-family: 'Gamja Flower', cursive
+}

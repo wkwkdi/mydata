@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    /* veiwport witdh,veiwport height 화면,브라우저 사이즈만큼 */
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    /* 각 행이 아닌 전체에서 중앙정렬할때 사용 */
+}
+.gallery >.image-wrapper{
+    padding: 10px;
+    width: calc(100%/3);
+    /* flex-basis: calc(100%/3); */
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* 위 속성은 줄어듦 */
+    object-fit: cover;
+    /* 위 속성은 사진 비율을 맞춰줌 */
+
+}
+img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    gap: 0.5rem;
+}

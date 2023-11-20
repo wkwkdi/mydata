@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../resources/jqurey-3.6.4.js"></script>
+</head>
+<body>
+    <form>
+        <label for="user">이름</label>
+        <input type="text" id="user" value="readonly" readonly><br>
+        <label>성별</label> 
+        <input type="radio" id="gend" name="gend" value="남자" checked >남자
+        <input type="radio" id="gend" name="gend" value="여자">여자<br>
+        <label for="intro">소개</label> 
+        <textarea id="intro" cols="40" rows="4"></textarea> <br>
+        <label for="work">직업</label>
+        <select id="work">
+            <option value="programmer">프로그래머</option>
+            <option value="progammer">프로게이머</option>
+            <option value="whitehand">백수</option>
+        </select><br>
+        <input type="button" id="btnView" value="조사하기">
+        <input type="button" id="btnChange" value="이름변경">
+    </form>
+</body>
+<script>
+    //이름변경 이벤트
+$("#btnChange").on("click",function(){
+  const nameInput= $("#user");
+//   console.log(nameInput.val("America"));
+    const newName = prompt("이름을 입력해주세요")
+    nameInput.val(newName);
+})
+
+console.log($("label[for=user]").val())
+
+$("#btnView").on("click",function(){
+    const view=$("#user").val();
+    const gender=$("#gend").val();
+    const intro=$("#intro").val();
+    const job=$(":selected").val();
+    alert(`${veiw},${gender},${intro},${job}`)
+})
+</script>
+</html>

@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+img{
+    width: 100%;
+    border-radius: 10px;
+    max-width: 100%;
+    object-fit: cover;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+.pic{
+        display: flex;
+        flex-wrap: wrap;
+        /* 줄 바꾸기 */
+}
+.pic >.box{
+    padding: 10px;
+    flex-basis: calc(100%/4);
+    /* vw로 값을 주면 화면 비율에 맞춰 사진이 깨지지 않음 */
+}
+.pic >.box img{
+    transform: scale(1);
+    transition: all 1s ease;
+}
+.pic >.box:hover img{
+    transform: scale(1.2);
+
+}
+    
+.pic >.box:first-child{
+    flex-basis:50%;
+    /* 위에서 100/4=25% 차지했으니 크기를 두배로
+    하려면 50% 비율로 늘림 */
+}
+.pic >.box:first-child img{
+    aspect-ratio: 2/1;
+}

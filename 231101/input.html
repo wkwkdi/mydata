@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../jquery-3.6.4.js"></script>
+
+<body>
+    <button>클릭하세요</button>
+</body>
+<script>
+   $("button").on("click",function(){
+        const imgArr = ["1.jpeg","2.webp"]
+        const randNum = parseInt(Math.random() * 2);
+    const img = $(`<img src="${imgArr[randNum]}" width="200px" height="200px" style="border:2px solid red;"/>`);
+    img.appendTo("body");
+   })
+</script>
+</html>

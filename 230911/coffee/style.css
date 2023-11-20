@@ -1,0 +1,68 @@
+/* 전역변수 지정 */
+:root{
+   /* 변수명=var, var=variable */
+    --size:50px;
+    --pos:20px;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+    /* 1.이미지 리셋시키기 */
+    height: 100%;
+    object-fit: cover;
+}
+.gallery{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* 2.폭을 화면100% 맞추고 최대로 늘어가는 값 맞추기
+    마진으로 가운데 정렬 */
+    gap: 2rem;
+}
+.gallery-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: calc(100%/4);
+    gap: 1rem;
+}
+.image{
+    
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    border-radius: var(--size);
+}
+.image .badge{
+    --size:30px;
+    /* 위에 전역변수를 지정했지만 여기 지역은 이 변수를 적용하고싶다
+    하면 이쪽에 변수지정가능 */
+    position: absolute;
+    background-color: hsl(220, 50%, 50%);
+    bottom: var(--pos);
+    left: var(--pos);
+    /* padding: 1rem; */
+    border-radius: 50px;
+    font-size: 13px;
+    color: aliceblue;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-item h2{
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    width: 150px;
+}
