@@ -245,98 +245,43 @@
       </div>
 </body>
 <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
-  import{getFirestore, collection, getDocs} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAJcbfO9kN2i_Ap22mLCch3H0BUaXO-2I0",
-    authDomain: "test-50c50.firebaseapp.com",
-    projectId: "test-50c50",
-    storageBucket: "test-50c50.appspot.com",
-    messagingSenderId: "100957826346",
-    appId: "1:100957826346:web:3e61f17bd09bad4cb08253",
-    measurementId: "G-2F7T0J10W2"
+  // import { db,getDocs,collection } from "../resources/firebase.js";
+  import * as firebase from "../resources/firebase.js";
+  const { db,getDocs,collection,getDatas }= firebase
+ 
+  async function getCourse(){
+    const courseList = document.getElementById("courseList")
+    const querySnapshot = await getDatas("course");
+    querySnapshot.forEach((doc) =>{
+     const {courseAlt,courseName,courseImgPath,tchrName,tchrPflImgPath}= doc.data();
+    courseList.insertAdjacentHTML("beforeend",`   
+    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+      <a href="#" class="course">
+        <img
+          src="${courseImgPath}"
+          width="100%"
+          class="course-img"
+          alt="${courseAlt}"
+        />
+        <div class="info">
+          <h4>${courseName}</h4>
+          <div class="lecture">
+            <img
+              src="${tchrPflImgPath}"
+              width="20"
+              height="20"
+              alt="강사 프로필"
+            />
+            <span class="name">${tchrName}</span>
+          </div>
+        </div>
+      </a>
+    </div>`
+    );
+  });
   };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
-<script>
-  console.log()
-  // const courseArr = [];
-  // const courseObj1 = {
-  //   courseImgPath: "../사진/course8.jpg",
-  //   courseAlt: "과정8번",
-  //   courseName: "기본부터 익히는 플라워 클래스",
-  //   tchrPflImgPath: "../사진/user.png",
-  //   tchrName: "김진용",
-  // };
-  // const courseObj2 = {
-  //   courseImgPath: "../사진/course7.jpg",
-  //   courseAlt: "과정7번",
-  //   courseName: "사진 작가에게 배우는 야외사진",
-  //   tchrPflImgPath: "../사진/user.png",
-  //   tchrName: "김진용",
-  // };
-  // const courseObj3 = {
-  //   courseImgPath: "../사진/course6.jpg",
-  //   courseAlt: "과정6번",
-  //   courseName: "아이돌 댄스 정복하기",
-  //   tchrPflImgPath: "../사진/user.png",
-  //   tchrName: "김진용",
-  // };
-  // const courseObj4 = {
-  //   courseImgPath: "../사진/course5.jpg",
-  //   courseAlt: "과정5번",
-  //   courseName: "자신감 업! 메이크업 클래스",
-  //   tchrPflImgPath: "../사진/user.png",
-  //   tchrName: "김진용",
-  // };
-  // courseArr.push(courseObj1);
-  // courseArr.push(courseObj2);
-  // courseArr.push(courseObj3);
-  // courseArr.push(courseObj4);
-
-  // console.log(courseArr)
-  // //노드,요소
-  // //노드를 추가하는 방법
-  // //append, prepend, before,after.appendChild, insertBefore
-  // //문자열로 추가할 수 있는 방법
-  // //innerHTML, insertAdjacentHTML
-  
-  // const courseList = document.getElementById("courseList")
-  // courseArr.forEach(el =>{
-  //   courseList.insertAdjacentHTML("beforeend",`   
-  //   < div class="col-12 col-md-6 col-lg-4 col-xl-3">
-  //     <a href="#" class="course">
-  //       <img
-  //         src="${el.courseImgPath}"
-  //         width="100%"
-  //         class="course-img"
-  //         alt="${el.courseAlt}"
-  //       />
-  //       <div class="info">
-  //         <h4>${el.courseName}</h4>
-  //         <div class="lecture">
-  //           <img
-  //             src="${el.tchrPflImgPath}"
-  //             width="20"
-  //             height="20"
-  //             alt="강사 프로필"
-  //           />
-  //           <span class="name">${el.tchrName}</span>
-  //         </div>
-  //       </div>
-  //     </a>
-  //   </div>`);
-  // })
+  getCourse();
 </script>
 
 </html>
