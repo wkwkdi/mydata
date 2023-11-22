@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bigBox1{
+    width: 100%;
+    text-align: center;
+    color: blue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.bigBox2{
+    margin-top: 20px;
+    pad: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+}
+.bigBox2 .b1 img{
+    width: 100%;
+}
+.bigBox2 .b2{
+    padding:10px;
+    font-size: 1.2rem;
+}
+.bigBox3{
+    height: 200px;
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.bigBox3 img{
+    width: 100%;
+}
+.bigBox3 p{
+    font-size: 1.2rem;
+}
