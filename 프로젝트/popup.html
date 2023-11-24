@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .container {
+        background-color: #333;
+        /* width: 50%; */
+        width: 600px;
+        height: 300px;
+        position: absolute;
+        top: 300px;
+        left: 40%;
+    }
+
+    .title {
+        text-align: center;
+        color: white;
+    }
+
+    .main {
+        display: flex;
+        /* justify-content: center; */
+    }
+    img{
+        width: 250px;
+        padding-left: 20px;
+    }
+    .list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2 class="title">커피집</h2>
+        <div class="main">
+                <img src="https://picsum.photos/id/17/300/200" />
+            <ul class="list">
+                <il>연락처 &nbsp; 010-000-0000</il>
+                <il>영업시간 &nbsp; 09:00-22:00</il>
+                <il>주소 &nbsp; 대전광역시 중구 서구 대덕구</il>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

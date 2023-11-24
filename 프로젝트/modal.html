@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../resources/jqurey-3.6.4.js"></script>
+</head>
+<style>
+.modal{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+} 
+.main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #333;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main_m{
+    display: flex;
+}
+.modal_img {
+    width: 250px;
+    height: 200px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: center;
+    color: white;
+}
+.list li{
+    margin-bottom: 10px;
+}
+.modal_title {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+</style>
+<body>
+    <button>버튼</button>
+    <div class="modal">
+        <div class="modal_content" title="클릭하면 창이 닫힙니다">
+            <div class="main">
+                <h2 class="modal_title">커피집</h2>
+                <div class="main_m">
+                <img class="modal_img" src="https://picsum.photos/id/17/300/200" />
+                <ul class="list">
+                    <li>연락처 &nbsp; 010-000-0000</li>
+                    <li>영업시간 &nbsp; 09:00-22:00</li>
+                    <il>주소 &nbsp; 대전광역시 중구 서구 대덕구</il>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+        $(document).ready(function() {
+        $("button").click(function () {
+            $(".modal").fadeIn();
+            $(".modal_content").css("overflow", "hidden");
+        });
+
+        $(".modal_content").click(function () {
+            $(".modal").fadeOut();
+            $(".modal_content").css("overflow", "auto")
+        });
+    });
+</script>
+</html>

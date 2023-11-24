@@ -1,30 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="../resources/jqurey-3.6.4.js"></script>
 </head>
 <body>
-    <div class="container">
-    <div class="header">
-        <h3>지점위치</h3>
-        <p>text</p>
+    <nav id="nav">
+        <a href="#">logo</a>
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+        </ul>
+    </nav>
+    <div class="head">
+    <h3 class="head-h">대여·반납 지점 안내</h3><br>
+    <p>환경을 지키는 작은 우산, 쓰슈가<br>
+        ​지도에 표시된 곳에서 당신을 기다리고 있어요!<br>
+        지하철역 이외 지점의 경우 대여하러 가기 전에<br>
+        위치와 영업시간을 꼭 확인해주세요</p>
     </div>
-    <div>
-        <img src="노선도.png" alt="">
-        <div class="name">
-            <p>노선명</p>
-            <p>장소</p>
-            <p>영업시간</p>
-            <div class="name2">
-                <p>대여가능</p>
-                <p>총개수</p>
+    <div class="middle">
+        <ul class="middle-title">
+            <li>
+                대여가능:
+            </li>
+            <li>
+                대여가능:
+            </li>
+        </ul>
+        <ul class="middle-title">
+            <li>
+                대여가능:
+            </li>
+            <li>
+                대여가능:
+            </li>
+        </ul>
+        <ul class="middle-title">
+            <li>
+                대여가능:
+            </li>
+            <li>
+                대여가능:
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h3>지점위치</h3>
+            <p>사용자가 우산을 빌린 지점이 아니더라도 쓰슈 지점<br>어디에서든 우산 반납이 가능합니다.</p>
+        </div>
+        <div class="map">
+            <img class="sub" src="노선도.png" alt="지하철 노선도">
+            <ul class="map-title">
+                <li>
+                    장소:
+                </li>
+                <li>
+                    운영시간:
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="add">관평동</h2>
+    <div class="map2">
+        <div class="samllBox1">
+            <div class="add_1"><img src="https://picsum.photos/id/17/300/200" /></div>
+            <p>oo카페</p>
+        </div>
+        <div class="samllBox2">
+            <div class="add_1"><img src="https://picsum.photos/id/20/300/200" /></div>
+            <p>oo카페</p>
+        </div>
+        <div class="samllBox3">
+            <div class="add_1"><img src="https://picsum.photos/id/32/300/200" /></div>
+            <p>oo카페</p>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal_content" title="클릭하면 창이 닫힙니다">
+            <div class="main">
+                <h2 class="modal_title">커피집</h2>
+                <div class="main_m">
+                <img class="modal_img" src="https://picsum.photos/id/17/300/200" />
+                <ul class="list">
+                    <li>연락처 &nbsp; 010-000-0000</li>
+                    <li>영업시간 &nbsp; 09:00-22:00</li>
+                    <il>주소 &nbsp; 대전광역시 중구 서구 대덕구</il>
+                </ul>
+                </div>
             </div>
         </div>
     </div>
-    </div>
 </body>
+<script>
+    $(document).ready(function() {
+        $("img").click(function () {
+            $(".modal").fadeIn();
+            $(".modal_content").css("overflow", "hidden");
+        });
+
+        $(".modal_content").click(function () {
+            $(".modal").fadeOut();
+            $(".modal_content").css("overflow", "auto")
+        });
+    });
+</script>
 
 </html>
