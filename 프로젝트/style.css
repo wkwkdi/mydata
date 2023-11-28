@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 ul {
     list-style: none
 }
@@ -48,7 +47,7 @@ a {
 
 .container {
     background-color: rgb(235, 235, 235);
-    width: 100%;
+    max-width: 100%;
 }
 
 .header {
@@ -61,28 +60,34 @@ a {
     left: 3%;
     z-index: 1;
 }
-
-.middle {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-}
-
 .middle-title {
-    margin: 10px;
-    width: 400px;
-    height: 150px;
-    box-shadow: 1px 2px 3px 3px gray;
-    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    
 }
-/* .middle-title li{
+
+.icon-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    width: 400px;
+    height: 120px;
+    box-shadow: 1px 2px 3px 3px gray;
+}
+
+.icon-list li {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+.m-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
-svg{
-    display: flex;
+}
+.icon-list svg{
+    padding-left: 20px;
 }
 .map {
     display: flex;
@@ -133,6 +138,7 @@ svg{
 }
 
 .add2 {
+    overflow: hidden;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -144,9 +150,14 @@ svg{
     box-shadow: 2px 2px 20px #ccc;
     cursor: pointer;
 }
-.add3:hover{
-    opacity: 0.9;
+.add3 img{
+    transition-duration: 1s;
 }
+.add3:hover img {
+    transform: scale(1.02, 1.02);
+    transition-duration: 0.5s;
+    
+  }
 .modal {
     position: fixed;
     display: none;
@@ -203,9 +214,11 @@ svg{
     text-align: center;
 }
 
-.logo_b {}
-
 .icon {
     width: 100px;
     height: 100px;
+}
+
+@media (max-width:1024px) {
+    
 }
