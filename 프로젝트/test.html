@@ -1,149 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        </head>
-    <script src="../resources/jqurey-3.6.4.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../resources/jqurey-3.6.4.js"></script>
 <style>
-    * {
-        padding: 0;
-        margin: 0;
+    /* .container {
+        background-color: #CCCCCC;
+        height: 800px;
+        margin-top: 100px;
+        display: flex;
     }
 
-    ul {
+    .head-m {
+        display: flex;
+        gap: 50px;
+        margin: 30px;
+        padding-top: 50px;
+        padding-left: 300px;
+
+    }
+
+    .map-title {
+        background-color: white;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
         list-style: none;
+        width: 690px;
+        padding: 40px;
+        border-radius: 20px;
     }
 
-    .pull-left {
-        float: left;
+    .map-title li {
+        font-size: 20px;
     }
 
-    .clearfix:after {
-        content: '';
-        display: block;
-        clear: both;
-        float: none;
-    }
-
-    /** 목록 박스의 넓이 지정 및 중앙 배치 */
-    .gallery {
+    .sub {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        border-radius: 20px;
         width: 700px;
-        margin: auto;
-        border: 5px solid #d5d5d5;
+
     }
 
-    /** 각 항목에 대한 가로 배열 */
-    .gallery .item {
-        width: 25%;
+    .map {
+        display: flex;
+        gap: 300px;
+        justify-content: center;
     }
 
-    /** 각 항목 링크에 대한 크기 지정 */
-    .gallery .item .modal {
-        display: block;
-        margin: 10px;
-        width: auto;
+    .middle-title {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+
+    } */
+    .container{
+        background-color: #cccccc;
+        height: 800px;
+        
+    }
+    .head-m{
+        display: flex;
+    }
+    .map{
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    .sub{
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        border-radius: 20px;
+        width: 700px;
+    }
+    .map-title{
+        list-style: none;
+        background-color: white;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        width: 690px;
+        padding: 40px;
+        border-radius: 20px;
+
     }
 
-    /** 이미지에 대한 테두리 제거 및 여백 지정 */
-    .gallery .item .modal img {
-        width: 100%;
-        height: 100%;
-    }
-
-    /** 화면 전체를 덮는 배경 레이어의 위치, 크기, 투명도 지정 > 기본적으로 표시되지 않도록 설정 */
-    .gray_layer {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background: black;
-        opacity: 0.60;
-        display: none;
-    }
-
-    /** 이미지가 표현될 레이어를 화면 중앙에 배치 > 기본적으로 표시되지 않도록 설정 */
-    .over_layer {
-        /* 요소의 좌측상단 꼭지점이 화면 중앙에 위치하게 된다. */
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        /* 요소의 크기/2 만큼 왼쪽,상단 방향으로 이동시켜 가운데 배치한다 */
-        margin-top: -244px;
-        margin-left: -325px;
-        display: none;
+    @media (max-width:767px) {
+        .container{
+            background-color: #cccccc;
+            height: 100%;
+        }
+        .map{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .head-m{
+            /* text-align: center; */
+            display: flex;
+            justify-content: center;
+        }
+        .head-h{
+            padding-right: 10px;        
+        }
+        .map-title{
+            width: 620px;
+        }
     }
 </style>
 
 <body>
-    <div class='gray_layer' id='background'></div>
-    <div class='over_layer' id='front'></div>
-    <!--
-        <div class='over_layer' id='front'><img src='" + src +"'/></div>
-    -->
-    <!-- 이미지 목록 -->
-    <ul class='gallery clearfix'>
-        <li class='item pull-left'><a href="2.webp" class="modal"><img src="2.webp" alt="샹드리아" /></a></li>
-        <li class='item pull-left'><a href="../사진/1.jpeg" class="modal"><img src="../사진/1.jpeg" alt="장미" /></a>
-        </li>
-        <li class='item pull-left'><a href="../사진/2.jpeg" class="modal"><img src="../사진/2.jpeg" alt="바다" /></a>
-        </li>
-        <li class='item pull-left'><a href="../사진/3.jpeg" class="modal"><img src="../사진/3.jpeg" alt="문" /></a>
-        </li>
-        <li class='item pull-left'><a href="../사진/4.webp" class="modal"><img src="../사진/4.webp" alt="바다" /></a>
-        </li>
-    </ul>
-    <a class="modal" href="2.webp">
-        <div class="modal_content" title="클릭하면 창이 닫힙니다">
-            <div class="main">
-                <h2 class="modal_title">커피집</h2>
-                <div class="main_m">
-                    <img class="modal_img" src="2.webp" />
-                    <ul class="list">
-                        <li>연락처 &nbsp; 010-000-0000</li>
-                        <li>영업시간 &nbsp; 09:00-22:00</li>
-                        <il>주소 &nbsp; 대전광역시 중구 서구 대덕구</il>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="head-m">
+            <h3 class="head-h">대전 지하철 노선도</h3>
+            <p>사용자가 우산을 빌린 지점이 아니더라도<br>
+                <span class="point">대전 지하철역
+
+                </span>과
+                <span class="point">쓰슈 협업지점 어디에서든
+
+                </span>
+                우산 반납이 가능합니다.
+            </p>
+        </div>
+        <div class="map">
+            <div class="sub">
+                <img src="../사진/노선도.svg" alt="지하철 노선도">
+            </div>
+            <div class="sub_2">
+            <ul class="map-title">
+                <h2 class="title_point">서비스 안내</h2>
+                <li>
+                    쓰슈 공유우산 서비스를 안내해드립니다.
+                </li><br><br><br>
+                <h3 class="map_point">이용안내</h3>
+                <li>
+                    <strong>이용대상</strong> 대전시민 누구나
+                </li>
+                <li>
+                    <strong>대여시간</strong> 05~24시
+                </li>
+                <li>
+                    <strong>반납시간</strong> 24시간
+                </li>
+                <li>
+                    ※ 이용 성수기인 3월부터 11월까지는 24시간 운영합니다.
+                </li><br><br><br>
+                <h3 class="map_point">요금안내</h3>
+                <li>
+                    <strong>기본 사용료</strong> 1시간 무료
+                </li>
+                <li>
+                    <strong>추가 사용료</strong> 30분당 500원/1일 1회당 최대 추가 사용료는 5,000원
+                </li>
+                <li>
+                    * 1시간 내 반납 후 재대여하면 추가요금 없이 반복 이용 가능
+                </li>
+            </ul>
             </div>
         </div>
-    </a>
-    
-    </body>
-    <script>
-     $('.modal').on('click',function(e){
-            //a태그가 가진 이벤트 막기
-            e.preventDefault();
+    </div>
+</body>
+<script>
 
-            $("#background").fadeIn(200);  //배경 레이어
-            $("#front").fadeIn(200);  //이미지 레이어
-
-            let src = $(this).attr('href'); // 클릭한 링크의 href 속성값
-            let img = "<img src='" + src +"'/>"; //이미지 태그 구성 
-            $('#front').html(img);
-
-        });
-
-        //화면에 표시된 배경 레이어를 클릭한 경우
-       $('#background').click(function(){
-        $(this).fadeOut(200);
-        $("#front").fadeOut(200);
-       }); 
-
-    //    $(document).ready(function () {
-    //     $(".map2").click(function () {
-    //         $(".modal").fadeIn();
-    //         $(".modal_content").css("overflow", "hidden");
-    //     });
-
-    //     $(".modal_content").click(function () {
-    //         $(".modal").fadeOut();
-    //         $(".modal_content").css("overflow", "auto")
-    //     });
-    // });
 
 </script>
+
 </html>

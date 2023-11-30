@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    scrollbar-width: none;
+    -ms-overflow-style:none;
+    width: 80vw;
+    margin: 0 auto;
+    overflow: hidden;
+    border:  10px solid #555;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(5, 80vw);
+    column-gap: 1rem;
+    overflow: scroll;
+    height: 90vh;
+    list-style: none;
+    scroll-snap-type: both mandatory;
+}
+li{
+    scroll-snap-align: center;
+    display: inline-block;
+    border-radius: 3px;
+}
+</style>
+<body>
+    <div class="container">
+        <ul class="gallery">
+            <li style="background-color: #f6bd60;"></li>
+            <li style="background-color: #f7ede2;"></li>
+            <li style="background-color: #f5cac3;"></li>
+            <li style="background-color: #84a59d;"></li>
+            <li style="background-color: #f28482;"></li>
+        </ul>
+    </div>
+</body>
+<script>
+const slider = document.querySelector(".gallery");
+let startX = 0;
+let scrollLeft = 0;
+const SCROLL_SPEED = 3;
+
+function doScroll(e) {
+  e.preventDefault();
+  const x = e.pageX;
+  const move = x - startX;
+  slider.scrollLeft = scrollLeft - move;
+}
+
+slider.addEventListener("mousedown", (e) => {
+  slider.addEventListener("mousemove", doScroll);
+  slider.classList.remove("onDrag");
+  startX = e.pageX;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseup", () => {
+  slider.removeEventListener("mousemove", doScroll);
+  slider.classList.remove("onDrag");
+});
+
+slider.addEventListener("mouseleave", () => {
+  slider.removeEventListener("mousemove", doScroll);
+  slider.classList.remove("onDrag");
+});
+
+</script>
+</html>
