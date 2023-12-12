@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let z= 2;
+    function A(a,b){
+        console.log(a + b + B(a,b));
+    }
+
+    function B(a,b, ...args){
+        console.log(args);
+        return a + b;
+    };
+    const B =(a,b, ...arg)=>a+b;
+
+    const B = (a,b, ...arg)=>({a:a+b, b:a-b});
+
+    const B = ()=>{
+        return a + 20;
+    };
+
+    const B = a => a+20;
+    // A(2,5);
+    // console.log(z);
+    // A(10,3);
+    // console.log(z)
+
+    function B(a,b){
+        arr.forEach(v =>{
+            return z += v;
+        })
+    }
+
+    const arr = [1,2,3,4,5];
+    sumArr(arr);
+    console.log(z);
+    B(2,5,8)
+</script>
+</html>

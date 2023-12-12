@@ -1,5 +1,5 @@
-import { useRef } from "react";
 import "./Gesture.css";
+import { useRef } from "react";
 import { motion } from "framer-motion"
 
 const gestureVariant = {

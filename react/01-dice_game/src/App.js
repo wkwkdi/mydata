@@ -20,7 +20,19 @@ function random(n) {
   return Math.ceil(Math.random() * n);
 }
 
+// let value;
 
+// function useState(initialValue) {
+//   if (value === undefined) {
+//     value = initialValue;
+//   }
+
+//   const setState = (newValue) => {
+//     value = newValue;
+//   };
+
+//   return [value, setState];
+// }
 
 function App() {
   // State
@@ -33,22 +45,32 @@ function App() {
   const [otherGameHistory, setOtherGameHistory] = useState([]);
 
   const arr = [10, 20, 30, 40, 50];
-  const [one, two, three, ...four] = arr;
-  console.log(one, two, three, four);
+  const [...four] = arr;
+
+  let arr2 = [];
+  arr2[0] = arr[0];
+  arr2[1] = arr[1];
+  arr2[2] = arr[2];
+  arr2[3] = arr[3];
+  arr2[4] = arr[4];
+  arr2.push(6);
+  arr2 = [...arr, 60];
+
+  // 1 [1], 2 [1, 2], 6 [1, 2, 6]
 
   const handleRollClick = () => {
     // 주사위 숫자 뽑아야 한다.
     const nextMyNum = random(6);
     const nextOtherNum = random(6);
-    setMyNum(nextMyNum);
-    setGameHistory([...gameHistory, myNum]); // gameHistory = [myNum];
-    setOtherNum(nextOtherNum);
-    setOtherGameHistory([...otherGameHistory, otherNum]);
-    console.log(gameHistory);
+    // setMyNum(nextMyNum);
+    // setOtherNum(nextOtherNum);
+    setGameHistory([...gameHistory, nextMyNum]); // gameHistory = [myNum];
+    setOtherGameHistory([...otherGameHistory, nextOtherNum]);
   };
 
   const handleClearClick = () => {
-    alert("처음으로 함수");
+    setGameHistory([]);
+    setOtherGameHistory([]);
   };
 
   return (
@@ -57,18 +79,17 @@ function App() {
         <img src={logo} alt="주사위게임 로고" className="App-logo" />
         <h1 className="App-title">주사위게임</h1>
         <div>
-          <Button onClick={handleRollClick}>던지기</Button>
-          <Button onClick={handleClearClick}>처음부터</Button>
+          <Button className="App-button blue" onClick={handleRollClick}>
+            던지기
+          </Button>
+          <Button className="App-button red" onClick={handleClearClick}>
+            처음부터
+          </Button>
         </div>
       </div>
       <div className="App-boards">
-        <Board name="나" color="blue" num={myNum} gameHistory={gameHistory} />
-        <Board
-          name="상대"
-          color="red"
-          num={otherNum}
-          gameHistory={otherGameHistory}
-        />
+        <Board name="나" color="blue" gameHistory={gameHistory} />
+        <Board name="상대" color="red" gameHistory={otherGameHistory} />
       </div>
     </div>
   );
