@@ -1,14 +1,12 @@
-import './ReviewList.css'
-
+import "./ReviewList.css";
 
 function formatDate(value) {
   const date = new Date(value);
-  return `${date.getFullYear()}. ${date.getMonth()+1}. ${date.getDate()}`;
+  return `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()}`;
 }
 
 function ReviewListItem({ item, onDelete }) {
   const handleDeleteClick = () => onDelete(item.id);
-
   return (
     <div className="ReviewListItem">
       <img className="ReviewListItem-img" src={item.imgUrl} />
@@ -24,20 +22,17 @@ function ReviewListItem({ item, onDelete }) {
 }
 
 function ReviewList({ items, onDelete }) {
-
   return (
     <ul>
       {items.map((item) => {
         return (
           <li key={item.id}>
             <ReviewListItem item={item} onDelete={onDelete} />
-            <input type='text' />
           </li>
         );
       })}
     </ul>
   );
-
 }
 
 export default ReviewList;
