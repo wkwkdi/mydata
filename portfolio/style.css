@@ -1,0 +1,42 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.list li{
+    margin: 8px;
+}
+
+.list li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 4px;
+}
+
+#project{
+    background-color: aliceblue;
+}
+
+/* .front{
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+} */

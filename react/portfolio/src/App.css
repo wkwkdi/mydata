@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.list li {
+    margin: 8px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 4px;
+}
+
+#about{
+    width: auto;
+    height: 1200px;
+    margin-top: 50px;
+}
+
+#skill{
+    width: auto;
+    height: 1200px;
+}
+
+#project {
+    background-color: aliceblue;
+    width: auto;
+    height: 1200px;
+}
+
+#contact{
+    width: auto;
+    height: 1200px;
+}
+.title {
+    text-align: center;
+}
+
+.name {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 320px;
+    height: 120px;
+    padding: 24px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 24px;
+    display: flex;
+}
+.phone {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 320px;
+    height: 120px;
+    padding: 24px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.email {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 320px;
+    height: 120px;
+    padding: 24px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.wrap{
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 24px;
+    margin-top: 100px;
+    place-items: center;
+}
+
+.header {
+    animation: fadeIn 4s ease-in-out infinite;
+    width: auto;
+    height: 1200px;
+    text-align: center;
+    font-size: 300px;
+}
+
+.intro p{
+    font-size: 40px;
+    margin: 16px;
+    /* padding: 24px; */
+}
+
+.span{
+    font-size: 40px;
+    background-color: aliceblue;
+    width: auto;
+    height: 0;
+}
+.pro-container{
+    display: flex;
+}
+.project{
+    border: 1px solid#333;
+    width: 250px;
+    height: 300px;
+    margin: 16px;
+}
+.buddy{
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    
+}
+.ssu{
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+}
+footer{
+    background-color: #333;
+    height: 120px;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

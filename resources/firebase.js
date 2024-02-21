@@ -14,13 +14,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebas
  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
  
  const firebaseConfig = {
-   apiKey: "AIzaSyAJcbfO9kN2i_Ap22mLCch3H0BUaXO-2I0",
-   authDomain: "test-50c50.firebaseapp.com",
-   projectId: "test-50c50",
-   storageBucket: "test-50c50.appspot.com",
-   messagingSenderId: "100957826346",
-   appId: "1:100957826346:web:3e61f17bd09bad4cb08253",
-   measurementId: "G-2F7T0J10W2"
+    apiKey: "AIzaSyDwwq4si_CXaCcmuG2v0rbcfz6zXu327fs",
+  authDomain: "chat-95e0f.firebaseapp.com",
+  projectId: "chat-95e0f",
+  storageBucket: "chat-95e0f.appspot.com",
+  messagingSenderId: "583378842189",
+  appId: "1:583378842189:web:fe28fdd7677d56b8046204",
+  measurementId: "G-NN7TD731VJ"
  };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

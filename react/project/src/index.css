@@ -1,0 +1,33 @@
+.Service{
+    background-color: #FDF5F0;
+    /* width: 1920px; */
+    height: 400px;
+    /* text-align: center; */
+}
+.banner{
+    position: relative;
+    padding: 30px;
+    text-align: center;
+}
+.bannerImg{
+    vertical-align: middle;
+}
+.bannerText{
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.Content{
+    text-align: center;
+    padding-top: 30px;
+}
+.author{
+    text-align: center;
+    margin-top: 50px;
+}

@@ -1,0 +1,88 @@
+.container {
+    max-width: 400px;
+    height: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
+  }
+  
+  .message-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 300px;
+  }
+  
+  .messages {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .message-input {
+    flex: 1;
+    padding: 8px;
+  } 
+  
+  .send-button {
+    padding: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+  } 
+  .button{
+    background-color: #f2f2f2;
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .msg {
+    display: flex;
+    padding: 8px 16px;
+    margin: 8px;
+    border-radius: 8px;
+    max-width: 80%;
+  }
+  
+  .sent {
+    background-color: #DCF8C6;
+    align-self: flex-end;
+    width: 200px;
+    height: auto;
+}
+
+.received {
+    background-color: #EAEAEA;
+    align-self: flex-start;
+    width: 200px;
+    height: auto;
+}
+.messageContainer{
+  display: flex;
+  flex-direction: column;
+}
+.messageInfo{
+ color: #333;
+ font-size: 14px;
+ justify-content: flex-end;
+}
+.messageInfo span{
+  padding-right: 8px;
+}
